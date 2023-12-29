@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+*{
+    outline: none;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.parent .nav {
+  margin-top: -40px;
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgb(238, 234, 220);
+    position: fixed;
+}
+
+.parent .sideBar {
+  margin-left: -3000px;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  background-color: #fff;
+  transition: all 0.8s ease;
+}
+
+.parent .subSideBar {
+  margin-top: -45px;
+  height: 100vh;
+  width: 100%;
+  margin-left: -3000px;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background-color: rgba(68, 68, 68, 0.356);
+  transition: all 0.3s ease;
+}
+
+.parent .subSideBar.active {
+  margin-left: 0px;
+}
+
+.parent .sideBar.active {
+  margin-left: 0px;
+}
+
+.parent .sideBar .side {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.parent .nav .logo{
+    width: 100px;
+}
+
+.parent .nav .logo img{
+    width: 48px;
+    margin-left: 10px;
+}
+
+.parent .sideBar .sideLogo p {
+  font-size: 28px;
+  margin-left: 70px
+}
+
+.parent .nav .searchBar {
+  margin-left: 50px;
+  border: 2px solid #724ae8;
+  width: 360px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.parent .nav .searchBar input {
+  color: #724ae8;
+  height: 100%;
+  width: 80%;
+  padding-left: 10px;
+  background: transparent;
+}
+
+.parent .nav .searchBar .searchIcon {
+  color: #724ae8;
+}
+
+.parent .nav .menuOptions {
+  width: 500px;
+  padding: 5px;
+  margin-right: 30px;
+}
+
+.parent .nav .menuOptions a {
+  text-decoration: none;
+  color: black;
+  height: 100%;
+}
+
+.parent .Blur {
+  margin-top: -45px;
+  height: 100vh;
+  width: 100%;
+  margin-left: -3000px;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background-color: rgba(68, 68, 68, 0.356);
+  transition: all 0.3s ease;
+}
+
+.parent .Blur.active {
+  margin-left: 0px;
+}
+
+/* Login & Signup Form CSS Start */
+
+.parent .Blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent .Blur .blurEle {
+  height: 500px;
+  width: 20000px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent .Blur .close {
+  height: 100vh;
+  display: flex;
+  margin-top: 20px;
+  padding-right: 50px;
+  justify-content: end;
+}
+
+.wrapper{
+  background: #fff;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.wrapper.active {
+  display: none;
+}
+
+.wrapper1{
+  background: #fff;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+  display: none;
+}
+
+.wrapper1.active {
+  display: block;
+}
+
+.form{
+  padding: 25px 30px;
+}
+.form header{
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form form{
+  margin: 20px 0;
+}
+.form form .error-text{
+  color: #721c24;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 10px;
+  display: none;
+}
+.form form .name-details{
+  display: flex;
+}
+.form .name-details .field:first-child{
+  margin-right: 10px;
+}
+.form .name-details .field:last-child{
+  margin-left: 10px;
+}
+.form form .field{
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  position: relative;
+}
+.form form .field label{
+  margin-bottom: 2px;
+}
+.form form .input input{
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.form form .field input{
+  outline: none;
+}
+.form form .image input{
+  font-size: 17px;
+}
+.form form .button input{
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 13px;
+}
+.form form .field i{
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.form form .field i.active::before{
+  color: #333;
+  content: "\f070";
+}
+.form .link{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+}
+.form .link a{
+  color: #333;
+}
+.form .link a:hover{
+  text-decoration: underline;
+}
+
+.parent .nav .menuOptions svg {
+  display: none;
+}
+
+.parent .nav .menuOptions .focus {
+  height: 40px;
+  padding-top: 10px;
+}
+
+.parent .nav .menuOptions .focus :hover {
+  color: #724ae8;
+}
+
+.focus :focus {
+    border-bottom: 3px solid #724ae8;
+}
+
+.parent .nav .menuOptions .logIn p {
+  font-weight: 560px;
+}
+
+.parent .sec1 {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.parent .sec1 .direction {
+  display: flex;
+  flex-direction: row;
+}
+
+.parent .sec1 .direction .left {
+  margin-top: 52px;
+  height: 20px;
+}
+
+.parent .sec1 .direction .right {
+  margin-top: 50px;
+}
+
+.parent .sec1 .otherMenu {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 400px;
+  height: 25px;
+  margin-top: 50px;
+  border-radius: 10px;
+  overflow-x: auto;
+  user-select: none;
+}
+
+.parent .sec1 .otherMenu::-webkit-scrollbar {
+  display: none;
+}
+
+.parent .sec1 .otherMenu a {
+  font-weight: 550;
+  margin-left: 50px;
+  color: black;
+  text-decoration: none;
+}
+
+.parent .sec1 .head {
+  margin-top: 60px;
+  font-size: 50px;
+  font-weight: 558;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.parent .sec1 .head .headLogo {
+  width: 70px;
+}
+
+.parent .sec1 .assistant {
+  position: fixed;
+  margin-left: 1000px;
+  margin-top: 450px;
+  width: 400px;
+}
+
+  @media(max-width : 768px){
+    .parent .nav .menuOptions a{
+      display: none;
+    }
+
+    .s {
+      display: none;
+    }
+
+    .parent .sideBar .side a{
+      display: block;
+    }
+    .parent .nav .menuOptions svg {
+      display: block;
+    }
+  }
+
+  @media(max-width : 550px){
+    .parent .sec1 .otherMenu{
+      width: 300px;
+    }
+  }
+
+  @media(max-width : 822px){
+    .parent .sec1 .head {
+      margin-top: 60px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    .parent .sec1 .head .headLogo {
+      width: 50px;
+    }
+  }
+
+  @media(max-width : 515px){
+    .parent .sec1 .head {
+      margin-top: 60px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    .parent .sec1 .head .headLogo {
+      width: 40px;
+    }
+  }
+
+  @media(max-width : 330px){
+    .parent .sec1 .head {
+      margin-top: 60px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    .parent .sec1 .head .headLogo {
+      width: 40px;
+    }
+  }
+
+  @media(max-width : 360px){
+    .parent .sec1 .otherMenu{
+      width: 200px;
+    }
+  }
+  
+  @media(max-width : 770px){
+    .parent .nav .searchBar {
+      margin-left: 50px;
+      border: 2px solid #724ae8;
+      width: 400px;
+      height: 30px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media(max-width : 550px){
+    .parent .nav .searchBar {
+      margin-left: 50px;
+      border: 2px solid #724ae8;
+      width: 800px;
+      height: 30px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }

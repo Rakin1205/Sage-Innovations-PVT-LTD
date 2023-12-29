@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asistant.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>Standard Home Page</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="nav flex">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="logo">
+            </div>
+            <div class="searchBar">
+                <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                <input type="text" placeholder="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </div>
+            <div class="menuOptions flex">
+                <div class="home focus"><a href="index.html">home</a></div>
+                <div class="aboutUS focus"><a href="aboutUs.html">about US</a></div>
+                <div class="forum focus"><a href="forum.html">Forum</a></div>
+                <div class="settings focus"><p>settings</p></div>
+                <svg onclick=showSidebar() xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </div>
+        </div>
+        <div class="subSideBar"></div>
+        <div class="nav sideBar">
+            <div class="sideLogo">
+                <svg onclick=closeSidebar() xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <p>logo</p>
+            </div>
+            <div class="menuOptions side flex">
+                <div class="home focus"><a href="index.html">home</a></div>
+                <div class="aboutUS focus"><a href="aboutUs.html">about US</a></div>
+                <div class="forum focus"><a href="forum.html">Forum</a></div>
+                <div class="settings focus">settings</div>
+            </div>
+        </div>
+        <div class="sec1">
+            <div class="direction">
+                <svg class="left" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+                <div class="otherMenu">
+                    <div class="focus"><a href="FAQ.html">FAQ</a></div>
+                    <div class="focus"><a href="News.html">News</a></div>
+                    <div class="focus"><a href="contact.html">Contact</a></div>
+                    <div class="focus"><a href="Groups.html">Groups</a></div>
+                    <div class="focus"><a href="Members.html">Members</a></div>
+                    <div class="focus"><a href="Portfolio.html">Portfolio</a></div>
+                    <div class="programmeList focus"><a href="programme.html">Programme</a></div>
+                    <div class="fileShare focus"><a href="files.html">File</a></div>
+                </div>
+                <svg class="right" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+            </div>
+        </div>
+        <button class="chatbot-toggler">
+            <span class="material-symbols-rounded">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <div class="chatbot">
+            <header>
+              <h2>Chatbot</h2>
+              <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+              
+            </ul>
+            <div class="chat-input">
+              <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+              <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
+          </div>
+        </button>
+    </div>
+    <script src="script.js"></script>
+    <script src="asistant.js"></script>
+</body>
+</html>
